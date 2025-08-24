@@ -2,11 +2,12 @@
 
 **Для запуска проекта**
 - composer install
-- Настроить .env
-- php artisan key:generate
-- php artisan migrate --seed
-- php artisan l5-swagger:generate
+- Настроить .env (по сути просто продублировать .env.example)
 - docker-compose up -d
+- docker exec -it project_main bash
+    - php artisan migrate --seed
+    - php artisan key:generate
+    - php artisan l5-swagger:generate
 
 **Для доступа к API указать в заголовках X-API-Key или передавать его как queryParam**
 - Сам ключ оставил в .env.example
